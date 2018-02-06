@@ -1,5 +1,4 @@
-
-var cart = []; // this is an empty array
+var cart = [];
 
 function getCart() {
  return cart;
@@ -12,12 +11,11 @@ function setCart(c) {
     
 function addToCart(item) {
   var itemName = item;
-  //var itemPrice = Math.ceil(Math.random() * 100)
-  var getCart = new Object(); // this is an object for each item
-  getCart[itemName] = Math.ceil(Math.random() * 100); // itemName = key or property and itemPrice = value
-  cart.push(getCart); // adding objects to array
+  var getCart = new Object();
+  getCart[itemName] = Math.ceil(Math.random() * 100);
+  cart.push(getCart);
   console.log(`${itemName} has been added to your cart.`);
-  return cart; //  [{ "bananas": 17 }, { "pancake batter": 5 }, { "eggs": 49 }]
+  return cart;
 }
 
 function viewCart() {
@@ -30,7 +28,7 @@ function viewCart() {
   } else if (cart.length === 1) {
     console.log(`In your cart, you have ${Object.keys(cart[0])} at $${Object.values(cart[0])}.`);
   } else if (cart.length === 2) {
-    console.log(`In your cart, you have ${cartList.join(" ")} and ${Object.keys(cart[cart.length-1])} at $${Object.values(cart[cart.length-1])}.`);
+    console.log(`In your cart, you have ${cartList[0]} and ${Object.keys(cart[cart.length-1])} at $${Object.values(cart[cart.length-1])}.`);
   } else { 
     console.log(`In your cart, you have ${cartList.join(", ")}, and ${Object.keys(cart[cart.length-1])} at $${Object.values(cart[cart.length-1])}.`);
   }
