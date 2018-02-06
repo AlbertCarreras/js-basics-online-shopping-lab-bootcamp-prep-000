@@ -11,9 +11,9 @@ function setCart(c) {
     
 function addToCart(item) {
   var itemName = item;
-  var getCart = new Object();
-  getCart[itemName] = Math.ceil(Math.random() * 100);
-  cart.push(getCart);
+  //var getCart = new Object();
+  //getCart[itemName] = Math.ceil(Math.random() * 100);
+  cart.push({ [item] : Math.ceil(Math.random() * 100) });
   console.log(`${itemName} has been added to your cart.`);
   return cart;
 }
@@ -37,7 +37,7 @@ function viewCart() {
 function total() {
   var totalValue = 0;
   for (var i = 0; i < cart.length; i++) {
-         totalValue = totalValue + parseInt(Object.values(cart[i]))
+         totalValue = totalValue + parseInt(Object.values(cart[i]));
     }
-  return totalValue
+  return totalValue;
 }
