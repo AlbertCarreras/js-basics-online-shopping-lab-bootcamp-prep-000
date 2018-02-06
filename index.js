@@ -41,3 +41,12 @@ function total() {
     }
   return totalValue;
 }
+
+function placeOrder(ccNumber){
+  if (ccNumber = '') {
+    console.log("Sorry, we don't have a credit card on file for you.");
+  } else {
+    console.log(`Your total cost is ${totalValue}, which will be charged to the card ${ccNumber}.`);
+    cart = [];
+  }
+}
