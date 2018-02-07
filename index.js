@@ -49,14 +49,11 @@ function removeFromCart(item){
     if (inCart === true) {
              cart.splice(i, 1);
              return cart
-    } else {
-            if (i === cart.length-1) {
-            console.log("That item is not in your cart.");
-            return cart
-            } else {}
-    }
+    } else {}
   }
-}
+    console.log("That item is not in your cart.");
+    return cart
+  }
 
 function placeOrder(cardNumber){
   var cardNumberSent = cardNumber
