@@ -42,6 +42,22 @@ function total() {
   return totalValue;
 }
 
+function removeFromCart(item){
+  var itemDelete = item
+  for (i = 0; i < cart.length; i++) {
+    var inCart = cart[i].hasOwnProperty(itemDelete)
+    if (inCart === true) {
+             cart.splice(i, 1);
+             return cart
+    } else {
+            if (i === cart.length-1) {
+            console.log("That item is not in your cart.");
+            return cart
+            } else {}
+    }
+  }
+}
+
 function placeOrder(cardNumber){
   var cardNumberSent = cardNumber
   if (cardNumberSent === undefined) {
